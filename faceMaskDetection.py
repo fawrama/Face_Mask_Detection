@@ -9,7 +9,7 @@ import cvlib as cv
 model = load_model('faceMask_detection.model')
 
 # open webcam
-webcam = cv2.VideoCapture(0)
+webcam = cv2.VideoCapture(0) # if you are using external camera this value may change
 
 classes = ['No Mask', 'Mask']
 
