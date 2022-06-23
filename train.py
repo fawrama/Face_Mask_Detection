@@ -21,10 +21,11 @@ img_dims = (96, 96, 3) # hieght,width,color paths(RGB)
 
 data = []
 labels = []
+path = '' # add path to the data set
 
 # load image files from the dataset
 image_files = [f for f in glob.glob(
-    r'/mnt/2d3f0752-b6d9-49f5-94cc-f85e942a8495/home/abdullah/UIA/212/ML/project/dataset' + "/**/*", recursive=True) if not os.path.isdir(f)]
+    r'{}'.format(path) + "/**/*", recursive=True) if not os.path.isdir(f)]
 random.shuffle(image_files) 
 
 # converting images to arrays and labelling the categories
